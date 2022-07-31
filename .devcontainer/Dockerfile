@@ -32,7 +32,7 @@ RUN apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends python3-setuptools
 
-RUN pip3 install radian
+RUN pip3 install radian beem shiny
 
 # install dot net core runtime for the R Tools plugin
 RUN wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O /tmp/packages-microsoft-prod.deb \

@@ -61,7 +61,8 @@
 		//"GitHub.copilot",
 		"eamodio.gitlens",
 		"GitHub.vscode-pull-request-github",
-		"quarto.quarto"
+		"quarto.quarto",
+		"rstudio.pyshiny"
 		//"hoovercj.vscode-power-mode"
 	]
 

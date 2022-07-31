@@ -40,6 +40,13 @@ RUN echo "RENV_PATHS_CACHE=/renv/cache" >> /usr/local/lib/R/etc/Renviron
 # [Optional] Uncomment this section to install additional R packages.
 RUN install2.r --error --skipinstalled --ncpus -1 renv remotes
 
+# install radian via python and pip3
+RUN apt-get update \
+    && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends python3-setuptools
+
+RUN pip3 install radian beem shiny
+
 EXPOSE 8787
 
 CMD ["/init"]
